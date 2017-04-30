@@ -4,7 +4,6 @@ cache:
   directories:
     - Carthage/
 before_install:
-  - gem install xcpretty
   - brew install swiftlint
   - script/install
 before_script:
