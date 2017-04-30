@@ -106,6 +106,7 @@
 				E7C2B4E11EB5B39100619090 /* Sources */,
 				E7C2B4E21EB5B39100619090 /* Frameworks */,
 				E7C2B4E31EB5B39100619090 /* Resources */,
+				E7C2B5081EB5B4C300619090 /* [SwiftLint] Run Script */,
 			);
 			buildRules = (
 			);
@@ -195,6 +196,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E7C2B5081EB5B4C300619090 /* [SwiftLint] Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[SwiftLint] Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7C2B4E11EB5B39100619090 /* Sources */ = {
@@ -412,6 +430,7 @@
 				E7C2B5041EB5B39100619090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7C2B5051EB5B39100619090 /* Build configuration list for PBXNativeTarget "SlideStockTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +439,7 @@
 				E7C2B5071EB5B39100619090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
