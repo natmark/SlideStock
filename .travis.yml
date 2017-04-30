@@ -6,4 +6,4 @@ before_install:
 before_script:
   - set -o pipefail
 script:
-  - xcodebuild -project SlideStock.xcodeproj -scheme SlideStock -destination 'platform=iOS Simulator,name=iPhone 6s' -sdk iphonesimulator test | xcpretty -c
+  - xcodebuild -project SlideStock.xcodeproj -scheme SlideStock build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
