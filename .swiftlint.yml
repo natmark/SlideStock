@@ -22,6 +22,10 @@ type_name:
   max_length:
     warning: 60 # warning
     error: 80 # error
+vertical_whitespace:
+      severity: error
+trailing_newline:
+      severity: error
 variable_name:
   min_length: # not possible to disable this partial rule, so set it to zero
     warning: 0
