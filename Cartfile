@@ -1,0 +1,4 @@
+github "ishkawa/APIKit" ~> 3.0
+github "ikesyo/Himotoki" ~> 3.0
+github "ReactiveX/RxSwift" ~> 3.0
+github "pinterest/PINRemoteImage" ~> 3.0

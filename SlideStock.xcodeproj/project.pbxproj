@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7852E381EB5CEA6009DE5A0 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E311EB5CEA5009DE5A0 /* APIKit.framework */; };
+		E7852E391EB5CEA6009DE5A0 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */; };
+		E7852E3A1EB5CEA6009DE5A0 /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E331EB5CEA5009DE5A0 /* PINCache.framework */; };
+		E7852E3B1EB5CEA6009DE5A0 /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E341EB5CEA6009DE5A0 /* PINRemoteImage.framework */; };
+		E7852E3C1EB5CEA6009DE5A0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E351EB5CEA6009DE5A0 /* Result.framework */; };
+		E7852E3D1EB5CEA6009DE5A0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E361EB5CEA6009DE5A0 /* RxCocoa.framework */; };
+		E7852E3E1EB5CEA6009DE5A0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E371EB5CEA6009DE5A0 /* RxSwift.framework */; };
 		E7C2B4E91EB5B39100619090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2B4E81EB5B39100619090 /* AppDelegate.swift */; };
 		E7C2B4EB1EB5B39100619090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2B4EA1EB5B39100619090 /* ViewController.swift */; };
 		E7C2B4EE1EB5B39100619090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C2B4EC1EB5B39100619090 /* Main.storyboard */; };
@@ -26,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7852E311EB5CEA5009DE5A0 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
+		E7852E331EB5CEA5009DE5A0 /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
+		E7852E341EB5CEA6009DE5A0 /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
+		E7852E351EB5CEA6009DE5A0 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		E7852E361EB5CEA6009DE5A0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		E7852E371EB5CEA6009DE5A0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		E7C2B4E51EB5B39100619090 /* SlideStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C2B4E81EB5B39100619090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C2B4EA1EB5B39100619090 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +57,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7852E381EB5CEA6009DE5A0 /* APIKit.framework in Frameworks */,
+				E7852E391EB5CEA6009DE5A0 /* Himotoki.framework in Frameworks */,
+				E7852E3A1EB5CEA6009DE5A0 /* PINCache.framework in Frameworks */,
+				E7852E3B1EB5CEA6009DE5A0 /* PINRemoteImage.framework in Frameworks */,
+				E7852E3C1EB5CEA6009DE5A0 /* Result.framework in Frameworks */,
+				E7852E3D1EB5CEA6009DE5A0 /* RxCocoa.framework in Frameworks */,
+				E7852E3E1EB5CEA6009DE5A0 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +77,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7852E301EB5CEA5009DE5A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7852E311EB5CEA5009DE5A0 /* APIKit.framework */,
+				E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */,
+				E7852E331EB5CEA5009DE5A0 /* PINCache.framework */,
+				E7852E341EB5CEA6009DE5A0 /* PINRemoteImage.framework */,
+				E7852E351EB5CEA6009DE5A0 /* Result.framework */,
+				E7852E361EB5CEA6009DE5A0 /* RxCocoa.framework */,
+				E7852E371EB5CEA6009DE5A0 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E7C2B4DC1EB5B39100619090 = {
 			isa = PBXGroup;
 			children = (
 				E7C2B4E71EB5B39100619090 /* SlideStock */,
 				E7C2B4FC1EB5B39100619090 /* SlideStockTests */,
 				E7C2B4E61EB5B39100619090 /* Products */,
+				E7852E301EB5CEA5009DE5A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +143,7 @@
 				E7C2B4E21EB5B39100619090 /* Frameworks */,
 				E7C2B4E31EB5B39100619090 /* Resources */,
 				E7C2B5081EB5B4C300619090 /* [SwiftLint] Run Script */,
+				E7852E2F1EB5CE19009DE5A0 /* [Carthage] Run Script */,
 			);
 			buildRules = (
 			);
@@ -198,6 +235,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E7852E2F1EB5CE19009DE5A0 /* [Carthage] Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PINRemoteImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
+			);
+			name = "[Carthage] Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		E7C2B5081EB5B4C300619090 /* [SwiftLint] Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,6 +418,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SlideStock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.SlideStock;
@@ -373,6 +435,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SlideStock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.SlideStock;
