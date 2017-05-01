@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70F9FEB1EB76B0000E40FA3 /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */; };
 		E7852E381EB5CEA6009DE5A0 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E311EB5CEA5009DE5A0 /* APIKit.framework */; };
 		E7852E391EB5CEA6009DE5A0 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */; };
 		E7852E3A1EB5CEA6009DE5A0 /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E331EB5CEA5009DE5A0 /* PINCache.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
 		E7852E311EB5CEA5009DE5A0 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		E7852E331EB5CEA5009DE5A0 /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70F9FEB1EB76B0000E40FA3 /* PINOperation.framework in Frameworks */,
 				E7852E381EB5CEA6009DE5A0 /* APIKit.framework in Frameworks */,
 				E7852E391EB5CEA6009DE5A0 /* Himotoki.framework in Frameworks */,
 				E7852E3A1EB5CEA6009DE5A0 /* PINCache.framework in Frameworks */,
@@ -80,6 +83,7 @@
 		E7852E301EB5CEA5009DE5A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */,
 				E7852E311EB5CEA5009DE5A0 /* APIKit.framework */,
 				E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */,
 				E7852E331EB5CEA5009DE5A0 /* PINCache.framework */,
@@ -248,6 +252,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINRemoteImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PINOperation.framework",
 			);
 			name = "[Carthage] Run Script";
 			outputPaths = (
