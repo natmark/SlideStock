@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StockViewController.swift
 //  SlideStock
 //
 //  Created by AtsuyaSato on 2017/04/30.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StockViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
