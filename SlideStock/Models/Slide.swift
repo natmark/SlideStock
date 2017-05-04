@@ -8,6 +8,9 @@
 
 import UIKit
 
-class Slide: NSObject {
-
+struct Slide {
+    let title: String
+    let author: String
+    let thumbnailURL: String
+    let pdfURLString: String
 }

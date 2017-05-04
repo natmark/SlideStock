@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E70F9FEB1EB76B0000E40FA3 /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */; };
-		E7852E381EB5CEA6009DE5A0 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E311EB5CEA5009DE5A0 /* APIKit.framework */; };
 		E7852E391EB5CEA6009DE5A0 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */; };
 		E7852E3A1EB5CEA6009DE5A0 /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E331EB5CEA5009DE5A0 /* PINCache.framework */; };
 		E7852E3B1EB5CEA6009DE5A0 /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E341EB5CEA6009DE5A0 /* PINRemoteImage.framework */; };
@@ -20,7 +19,7 @@
 		E7A700EC1EB9C2970094FE49 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700EB1EB9C2970094FE49 /* StockViewModel.swift */; };
 		E7A700EE1EB9C2C10094FE49 /* ImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700ED1EB9C2C10094FE49 /* ImportViewModel.swift */; };
 		E7A700F21EB9C3150094FE49 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700F11EB9C3150094FE49 /* Slide.swift */; };
-		E7A700F71EB9C4440094FE49 /* SessionRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700F61EB9C4440094FE49 /* SessionRx.swift */; };
+		E7A700FA1EBA18B30094FE49 /* SlideRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700F91EBA18B30094FE49 /* SlideRequest.swift */; };
 		E7C2B4E91EB5B39100619090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2B4E81EB5B39100619090 /* AppDelegate.swift */; };
 		E7C2B4EB1EB5B39100619090 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2B4EA1EB5B39100619090 /* StockViewController.swift */; };
 		E7C2B4EE1EB5B39100619090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C2B4EC1EB5B39100619090 /* Main.storyboard */; };
@@ -53,7 +52,7 @@
 		E7A700EB1EB9C2970094FE49 /* StockViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 		E7A700ED1EB9C2C10094FE49 /* ImportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewModel.swift; sourceTree = "<group>"; };
 		E7A700F11EB9C3150094FE49 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
-		E7A700F61EB9C4440094FE49 /* SessionRx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRx.swift; sourceTree = "<group>"; };
+		E7A700F91EBA18B30094FE49 /* SlideRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRequest.swift; sourceTree = "<group>"; };
 		E7C2B4E51EB5B39100619090 /* SlideStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C2B4E81EB5B39100619090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C2B4EA1EB5B39100619090 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70F9FEB1EB76B0000E40FA3 /* PINOperation.framework in Frameworks */,
-				E7852E381EB5CEA6009DE5A0 /* APIKit.framework in Frameworks */,
 				E7852E391EB5CEA6009DE5A0 /* Himotoki.framework in Frameworks */,
 				E7852E3A1EB5CEA6009DE5A0 /* PINCache.framework in Frameworks */,
 				E7852E3B1EB5CEA6009DE5A0 /* PINRemoteImage.framework in Frameworks */,
@@ -114,7 +112,6 @@
 				E7A700E91EB9C15A0094FE49 /* SlideViewController.swift */,
 				E7C2B4EA1EB5B39100619090 /* StockViewController.swift */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -124,7 +121,6 @@
 				E7A700ED1EB9C2C10094FE49 /* ImportViewModel.swift */,
 				E7A700EB1EB9C2970094FE49 /* StockViewModel.swift */,
 			);
-			name = ViewModels;
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
@@ -133,26 +129,16 @@
 			children = (
 				E7A700F11EB9C3150094FE49 /* Slide.swift */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E7A700F41EB9C42C0094FE49 /* Extensions */ = {
+		E7A700F81EBA18400094FE49 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E7A700F51EB9C4320094FE49 /* ExtensionsRx */,
+				E7A700F91EBA18B30094FE49 /* SlideRequest.swift */,
 			);
-			name = Extensions;
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E7A700F51EB9C4320094FE49 /* ExtensionsRx */ = {
-			isa = PBXGroup;
-			children = (
-				E7A700F61EB9C4440094FE49 /* SessionRx.swift */,
-			);
-			name = ExtensionsRx;
-			path = ExtensionsRx;
+			name = Networking;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		E7C2B4DC1EB5B39100619090 = {
@@ -177,8 +163,8 @@
 		E7C2B4E71EB5B39100619090 /* SlideStock */ = {
 			isa = PBXGroup;
 			children = (
-				E7A700F41EB9C42C0094FE49 /* Extensions */,
 				E7A700F31EB9C3580094FE49 /* Models */,
+				E7A700F81EBA18400094FE49 /* Networking */,
 				E7A700F01EB9C2E90094FE49 /* ViewModels */,
 				E7A700EF1EB9C2DB0094FE49 /* Views */,
 				E7C2B4E81EB5B39100619090 /* AppDelegate.swift */,
@@ -308,7 +294,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
@@ -345,11 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A700F71EB9C4440094FE49 /* SessionRx.swift in Sources */,
 				E7A700EA1EB9C15A0094FE49 /* SlideViewController.swift in Sources */,
 				E7A700EC1EB9C2970094FE49 /* StockViewModel.swift in Sources */,
 				E7A700E81EB9BC0F0094FE49 /* ImportViewController.swift in Sources */,
 				E7C2B4EB1EB5B39100619090 /* StockViewController.swift in Sources */,
+				E7A700FA1EBA18B30094FE49 /* SlideRequest.swift in Sources */,
 				E7A700F21EB9C3150094FE49 /* Slide.swift in Sources */,
 				E7C2B4E91EB5B39100619090 /* AppDelegate.swift in Sources */,
 				E7A700EE1EB9C2C10094FE49 /* ImportViewModel.swift in Sources */,

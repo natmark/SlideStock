@@ -7,7 +7,48 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class ImportViewModel: NSObject {
+class ImportViewModel {
+    init() {
+        bindSearchRequest()
+    }
+    let error = PublishSubject<Error>()
 
+    let urlString = PublishSubject<String>()
+    let thumbnailString = PublishSubject<String>()
+    let title = PublishSubject<String>()
+    let author = PublishSubject<String>()
+
+    var loading: Observable<Bool> {
+        return isLoading.asObservable()
+    }
+
+    var componentsHidden: Observable<Bool> {
+        return Observable
+            .combineLatest(title, author, thumbnailString) { title, author, thumbnailString -> Bool in
+                return !title.isEmpty && !author.isEmpty && !thumbnailString.isEmpty
+            }
+            .startWith(true)
+    }
+
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate let isLoading: Variable<Bool> = Variable(false)
+
+    let importTrigger = PublishSubject<Void>()
+    let requestCompleted = PublishSubject<Slide>()
+
+    fileprivate func bindSearchRequest() {
+        urlString
+            .bind(onNext: { path in
+                do {
+                    let data = try FetchSlideRequest.getHTML(path: path)
+                    //TODO: Kanna
+                } catch {
+
+                }
+            })
+            .addDisposableTo(disposeBag)
+    }
 }
