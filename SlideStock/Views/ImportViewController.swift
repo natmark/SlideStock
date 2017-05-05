@@ -61,8 +61,10 @@ class ImportViewController: UIViewController {
             .addDisposableTo(disposeBag)
     }
     fileprivate func bindUI() {
-        URLTextField.rx.text
-            .flatMap { $0.flatMap(Observable.just) ?? Observable.empty() }
+        URLTextField.rx.controlEvent([.editingDidEnd])
+            .flatMap({
+                self.URLTextField.text.flatMap(Observable.just) ?? Observable.empty()
+            })
             .bind(to: viewModel.urlString)
             .addDisposableTo(disposeBag)
 

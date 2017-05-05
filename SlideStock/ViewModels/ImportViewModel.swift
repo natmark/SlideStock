@@ -41,8 +41,9 @@ class ImportViewModel {
 
     fileprivate func bindSearchRequest() {
         urlString
-            .bind(onNext: { path in
+            .subscribe(onNext: { path in
                 do {
+                    print(path)
                     let data = try FetchSlideRequest.getHTML(path: path)
                     //TODO: Kanna
                 } catch {
