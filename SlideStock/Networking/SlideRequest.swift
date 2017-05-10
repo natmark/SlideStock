@@ -17,7 +17,10 @@ extension SlideRequest {
         return "https://speakerdeck.com/"
     }
     static func getHTML(path: String) throws -> Data {
-        return try Data(contentsOf: URL(string: baseURL + path)!)
+        guard let url = URL(string: baseURL + path) else {
+            return try Data(contentsOf: URL(string: baseURL)!)
+        }
+        return try Data(contentsOf: url)
     }
 }
 class FetchSlideRequest: SlideRequest {

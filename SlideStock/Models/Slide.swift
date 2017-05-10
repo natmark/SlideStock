@@ -11,6 +11,5 @@ import UIKit
 struct Slide {
     let title: String
     let author: String
-    let thumbnailURL: String
-    let pdfURLString: String
+    let slideId: String
 }
