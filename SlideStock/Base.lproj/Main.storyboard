@@ -30,7 +30,7 @@
                                 <color key="separatorColor" red="0.075407676399999998" green="0.50124877690000003" blue="0.34099894759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.199973762" green="0.2000150383" blue="0.19997116919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="fbX-Js-mzh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="slideCell" rowHeight="84" id="fbX-Js-mzh" customClass="SlideCell" customModule="SlideStock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbX-Js-mzh" id="9V4-mu-zob">
@@ -81,6 +81,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.199973762" green="0.2000150383" blue="0.19997116919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="heU-lE-3G6" id="Eu6-YF-b04"/>
+                                            <outlet property="slideImageView" destination="xVr-vx-KZh" id="bIT-75-IGi"/>
+                                            <outlet property="titleLabel" destination="SR8-Lz-svO" id="nLd-Tx-uPJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -106,13 +111,14 @@
                         <barButtonItem key="rightBarButtonItem" image="icon_import" id="oMF-Fz-x5Q">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="ZJZ-xP-dRu" kind="show" id="J8j-Uj-Rb2"/>
+                                <segue destination="ZJZ-xP-dRu" kind="show" identifier="import" id="J8j-Uj-Rb2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="sjp-Td-ROh" id="c6Z-kw-7xO"/>
-                        <segue destination="4OU-zC-vF4" kind="show" id="Ig4-AS-vTY"/>
+                        <outlet property="tableView" destination="0EF-kD-sjC" id="NX8-7x-Sht"/>
+                        <segue destination="4OU-zC-vF4" kind="show" identifier="view" id="Ig4-AS-vTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -159,7 +165,7 @@
         <!--Slide Title-->
         <scene sceneID="Vnt-2v-6P3">
             <objects>
-                <viewController id="4OU-zC-vF4" customClass="SlideViewController" customModule="SlideStock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SlideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4OU-zC-vF4" customClass="SlideViewController" customModule="SlideStock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LjV-RZ-d8t"/>
                         <viewControllerLayoutGuide type="bottom" id="joB-Z3-slg"/>
@@ -168,7 +174,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lku-eb-bJf">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lku-eb-bJf">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
@@ -182,6 +188,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Slide Title" id="jdq-G3-6WZ"/>
+                    <connections>
+                        <outlet property="webView" destination="lku-eb-bJf" id="8V6-4b-kmI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQA-hS-gY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

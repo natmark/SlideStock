@@ -9,11 +9,14 @@
 import UIKit
 
 class SlideViewController: UIViewController {
+    @IBOutlet weak var webView: UIWebView!
+
+    var slide = Slide()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        webView.loadRequest(URLRequest(url: URL(string: "")!))
     }
 
     override func didReceiveMemoryWarning() {

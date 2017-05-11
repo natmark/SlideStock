@@ -17,7 +17,7 @@ extension String {
         guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
             return false
         }
-        let matches = regex.matches(in: self, options: [], range: NSMakeRange(0, self.count))
+        let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
         return matches.count > 0
     }
     //正規表現の検索結果を利用できます
@@ -38,6 +38,6 @@ extension String {
     //正規表現の置換をします
     func pregReplace(pattern: String, with: String, options: NSRegularExpression.Options = []) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: options)
-        return regex.stringByReplacingMatches(in: self, options: [], range: NSMakeRange(0, self.count), withTemplate: with)
+        return regex.stringByReplacingMatches(in: self, options: [], range: NSRange(location: 0, length: self.count), withTemplate: with)
     }
 }

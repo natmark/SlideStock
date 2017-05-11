@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E70F9FEB1EB76B0000E40FA3 /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */; };
+		E763C8021EC4A28300599513 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763C8011EC4A28300599513 /* SlideCell.swift */; };
 		E782AA3E1EBC8531006FBBEB /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3B1EBC8531006FBBEB /* Kanna.framework */; };
 		E782AA3F1EBC8531006FBBEB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3C1EBC8531006FBBEB /* Realm.framework */; };
 		E782AA401EBC8531006FBBEB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
+		E763C8011EC4A28300599513 /* SlideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
 		E782AA3B1EBC8531006FBBEB /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		E782AA3C1EBC8531006FBBEB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				E7A700E71EB9BC0F0094FE49 /* ImportViewController.swift */,
 				E7A700E91EB9C15A0094FE49 /* SlideViewController.swift */,
 				E7C2B4EA1EB5B39100619090 /* StockViewController.swift */,
+				E763C8011EC4A28300599513 /* SlideCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				E7C2B4EB1EB5B39100619090 /* StockViewController.swift in Sources */,
 				E7A700FA1EBA18B30094FE49 /* SlideRequest.swift in Sources */,
 				E7A700F21EB9C3150094FE49 /* Slide.swift in Sources */,
+				E763C8021EC4A28300599513 /* SlideCell.swift in Sources */,
 				E7C2B4E91EB5B39100619090 /* AppDelegate.swift in Sources */,
 				E7A700EE1EB9C2C10094FE49 /* ImportViewModel.swift in Sources */,
 			);
