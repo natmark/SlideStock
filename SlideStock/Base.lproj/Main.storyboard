@@ -218,7 +218,7 @@
                                     <constraint firstAttribute="height" constant="1" id="sdn-na-tjD"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUN-pa-HgZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUN-pa-HgZ">
                                 <rect key="frame" x="36" y="223" width="303" height="166.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eUN-pa-HgZ" secondAttribute="height" multiplier="100:55" id="egp-OR-Q01"/>

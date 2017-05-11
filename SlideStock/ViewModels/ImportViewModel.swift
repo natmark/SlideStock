@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Kanna
+import RealmSwift
 
 class ImportViewModel {
     init() {
@@ -18,9 +19,9 @@ class ImportViewModel {
     let error = PublishSubject<Error>()
 
     let urlString = PublishSubject<String>()
-    let thumbnailString = PublishSubject<String>()
-    let title = PublishSubject<String>()
-    let author = PublishSubject<String>()
+    let slideId = PublishSubject<String>()
+    let slideTitle = PublishSubject<String>()
+    let slideAuthor = PublishSubject<String>()
 
     var loading: Observable<Bool> {
         return isLoading.asObservable()
@@ -28,10 +29,23 @@ class ImportViewModel {
 
     var componentsHidden: Observable<Bool> {
         return Observable
-            .combineLatest(title, author, thumbnailString) { title, author, thumbnailString -> Bool in
-                return !title.isEmpty && !author.isEmpty && !thumbnailString.isEmpty
+            .combineLatest(slideTitle, slideAuthor, slideId) { slideTitle, slideAuthor, slideId -> Bool in
+                return slideTitle.isEmpty || slideAuthor.isEmpty || slideId.isEmpty
             }
             .startWith(true)
+    }
+    var importSlide: Observable<Void> {
+        return Observable
+            .zip(slideTitle, slideAuthor, slideId, importTrigger) { slideTitle, slideAuthor, slideId, importTrigger -> Void in
+                let slide = Slide()
+                slide.title = slideTitle
+                slide.author = slideAuthor
+                slide.id = slideId
+                let realm = try! Realm()
+                try? realm.write {
+                    realm.add(slide, update: true)
+                }
+        }
     }
 
     fileprivate let disposeBag = DisposeBag()
@@ -50,7 +64,7 @@ class ImportViewModel {
                     guard let details = doc?.body?.css("div#talk-details").first else {
                         return
                     }
-                    guard let slideName = details.css("h1").first?.innerHTML else {
+                    guard let title = details.css("h1").first?.innerHTML else {
                         return
                     }
                     guard let author = details.css("a").first?.innerHTML else {
@@ -63,13 +77,12 @@ class ImportViewModel {
                     if !slidesContainer.pregMatche(pattern: "data-id=\"([a-z0-9]+)\"", matches: &ans) || ans.count < 2 {
                         return
                     }
-                    let slideId = ans[1]
+                    let id = ans[1]
 
-                    print(slideName)
-                    print(author)
-                    print(slideId)
+                    self.slideId.onNext(id)
+                    self.slideAuthor.onNext(author)
+                    self.slideTitle.onNext(title)
                 } catch {
-
                 }
             })
             .addDisposableTo(disposeBag)

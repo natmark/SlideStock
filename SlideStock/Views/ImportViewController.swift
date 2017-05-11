@@ -44,19 +44,16 @@ class ImportViewController: UIViewController {
 
         viewModel.loading
             .bind { loading in
-                // ここでこのloadingをindicatorViewなどのrx_animatingなどにbindする。
             }
             .addDisposableTo(disposeBag)
 
         viewModel.requestCompleted
             .bind { post in
-                // 投稿が成功した時の処理を行う
             }
             .addDisposableTo(disposeBag)
 
         viewModel.error
             .bind { error in
-                // 投稿の通信でerrorが出てしまった場合の処理を行う
             }
             .addDisposableTo(disposeBag)
     }
@@ -68,19 +65,19 @@ class ImportViewController: UIViewController {
             .bind(to: viewModel.urlString)
             .addDisposableTo(disposeBag)
 
-        viewModel.thumbnailString
+        viewModel.slideId
             .bind(onNext: {
-                self.slideImageView.pin_setImage(from: URL(string: $0))
+                self.slideImageView.pin_setImage(from: URL(string: "https://speakerd.s3.amazonaws.com/presentations/\($0)/slide_0.jpg"))
             })
             .addDisposableTo(disposeBag)
 
-        viewModel.title
+        viewModel.slideTitle
             .bind(onNext: {
                 self.slideTitleLabel.text = $0
             })
             .addDisposableTo(disposeBag)
 
-        viewModel.author
+        viewModel.slideAuthor
             .bind(onNext: {
                 self.slideAuthorLabel.text = $0
             })
@@ -90,6 +87,11 @@ class ImportViewController: UIViewController {
             .bind(to: viewModel.importTrigger)
             .addDisposableTo(disposeBag)
 
+        viewModel.importSlide
+            .bind(onNext: {
+                self.navigationController?.popViewController(animated: true)
+            })
+            .addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
-struct Slide {
-    let title: String
-    let author: String
-    let slideId: String
+class Slide: Object {
+    dynamic var title: String = ""
+    dynamic var author: String = ""
+    dynamic var id: String = ""
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
