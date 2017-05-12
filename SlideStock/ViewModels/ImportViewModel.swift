@@ -63,21 +63,11 @@ class ImportViewModel {
                     print(path)
                     let data = try FetchSlideRequest.getHTML(path: path)
                     let doc = HTML(html: data, encoding: String.Encoding.utf8)
-                    guard let details = doc?.body?.css("div#talk-details").first else {
-                        return
-                    }
-                    guard let title = details.css("h1").first?.innerHTML else {
-                        return
-                    }
-                    guard let author = details.css("a").first?.innerHTML else {
-                        return
-                    }
-                    guard let pdfURL = doc?.body?.css("#share_pdf").first?["href"] else {
-                        return
-                    }
-                    guard let slidesContainer = doc?.body?.css("div#slides_container").first?.innerHTML else {
-                        return
-                    }
+                    guard let details = doc?.body?.css("div#talk-details").first else { return }
+                    guard let title = details.css("h1").first?.innerHTML else { return }
+                    guard let author = details.css("a").first?.innerHTML else { return }
+                    guard let pdfURL = doc?.body?.css("#share_pdf").first?["href"] else { return }
+                    guard let slidesContainer = doc?.body?.css("div#slides_container").first?.innerHTML else { return }
                     var ans: [String] = []
                     if !slidesContainer.pregMatche(pattern: "data-id=\"([a-z0-9]+)\"", matches: &ans) || ans.count < 2 {
                         return
