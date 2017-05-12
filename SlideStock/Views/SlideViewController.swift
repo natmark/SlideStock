@@ -7,31 +7,45 @@
 //
 
 import UIKit
+import WebKit
+import RxSwift
+import KYNavigationProgress
 
 class SlideViewController: UIViewController {
-    @IBOutlet weak var webView: UIWebView!
-
     var slide = Slide()
-
+    fileprivate let WKView = WKWebView()
+    fileprivate let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        webView.loadRequest(URLRequest(url: URL(string: "")!))
-    }
+        self.navigationController?.progressTintColor = UIColor.red
+        self.navigationItem.title = slide.title
 
+        self.view = self.WKView
+        self.WKView.navigationDelegate = self
+        guard let url = URL(string: slide.pdfURL) else {
+            return
+        }
+        self.WKView.load(URLRequest(url: url))
+        bindUI()
+    }
+    func bindUI() {
+        self.WKView.rx.estimatedProgress.bind(onNext: {
+            // self.progressView.progress = Float($0)
+            self.navigationController?.setProgress(Float($0), animated: false)
+        })
+        .addDisposableTo(disposeBag)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.cancelProgress()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+extension SlideViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.navigationController?.finishProgress()
     }
-    */
-
 }

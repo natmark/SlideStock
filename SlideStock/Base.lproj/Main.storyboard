@@ -15,7 +15,7 @@
         <!--Slide Stock-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StockViewController" customModule="SlideStock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="StockViewController" customModule="SlideStock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0EF-kD-sjC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0EF-kD-sjC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.199973762" green="0.2000150383" blue="0.19997116919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.075407676399999998" green="0.50124877690000003" blue="0.34099894759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,14 +89,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="DJU-GB-Hbb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ro8-vG-RuJ"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -116,21 +108,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="sjp-Td-ROh" id="c6Z-kw-7xO"/>
                         <outlet property="tableView" destination="0EF-kD-sjC" id="NX8-7x-Sht"/>
                         <segue destination="4OU-zC-vF4" kind="show" identifier="view" id="Ig4-AS-vTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="sjp-Td-ROh">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="C8S-r3-yOa"/>
-                        <outlet property="searchBar" destination="DJU-GB-Hbb" id="aHV-oE-3p7"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="OfY-G7-qNE"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="B4F-TL-s62"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="D7R-Nw-5Bo"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1084" y="-590.55472263868069"/>
         </scene>
@@ -165,7 +147,7 @@
         <!--Slide Title-->
         <scene sceneID="Vnt-2v-6P3">
             <objects>
-                <viewController storyboardIdentifier="SlideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4OU-zC-vF4" customClass="SlideViewController" customModule="SlideStock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SlideViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4OU-zC-vF4" customClass="SlideViewController" customModule="SlideStock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LjV-RZ-d8t"/>
                         <viewControllerLayoutGuide type="bottom" id="joB-Z3-slg"/>
@@ -173,24 +155,9 @@
                     <view key="view" contentMode="scaleToFill" id="9nY-6o-0bD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lku-eb-bJf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" red="0.199973762" green="0.2000150383" blue="0.19997116919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="lku-eb-bJf" firstAttribute="leading" secondItem="9nY-6o-0bD" secondAttribute="leading" id="2Ek-GJ-obY"/>
-                            <constraint firstAttribute="trailing" secondItem="lku-eb-bJf" secondAttribute="trailing" id="9ie-4v-fwV"/>
-                            <constraint firstItem="lku-eb-bJf" firstAttribute="top" secondItem="LjV-RZ-d8t" secondAttribute="bottom" id="UbH-Wf-KeU"/>
-                            <constraint firstItem="joB-Z3-slg" firstAttribute="top" secondItem="lku-eb-bJf" secondAttribute="bottom" id="bHO-cL-RT6"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Slide Title" id="jdq-G3-6WZ"/>
-                    <connections>
-                        <outlet property="webView" destination="lku-eb-bJf" id="8V6-4b-kmI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQA-hS-gY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

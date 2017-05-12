@@ -13,7 +13,7 @@ class Slide: Object {
     dynamic var title: String = ""
     dynamic var author: String = ""
     dynamic var id: String = ""
-
+    dynamic var pdfURL: String = ""
     override static func primaryKey() -> String? {
         return "id"
     }

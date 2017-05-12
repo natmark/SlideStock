@@ -20,13 +20,28 @@ class StockViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = viewModel
+
+        self.definesPresentationContext = true
+        viewModel.searchController.searchResultsUpdater = viewModel
+        viewModel.searchController.searchBar.sizeToFit()
+        viewModel.searchController.dimsBackgroundDuringPresentation = false
+        viewModel.searchController.hidesNavigationBarDuringPresentation = true
+        viewModel.searchController.searchBar.barStyle = .black
+        tableView.tableHeaderView = viewModel.searchController.searchBar
+        bindUI()
+    }
+    func bindUI() {
         viewModel.slides.asObservable().bind(onNext: { _ in
             self.tableView.reloadData()
         })
-        .addDisposableTo(disposeBag)
-
+            .addDisposableTo(disposeBag)
+        viewModel.searchResults.asObservable().bind(onNext: { _ in
+            self.tableView.reloadData()
+        })
+            .addDisposableTo(disposeBag)
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel.reloadData()
     }
     override func didReceiveMemoryWarning() {
@@ -51,7 +66,9 @@ extension StockViewController: UITableViewDelegate {
         return [myDeleteButton]
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.searchController.resignFirstResponder()
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SlideViewController") as! SlideViewController
+        viewController.slide = viewModel.indexOf(index: indexPath.row)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

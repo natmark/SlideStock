@@ -22,6 +22,7 @@ class ImportViewModel {
     let slideId = PublishSubject<String>()
     let slideTitle = PublishSubject<String>()
     let slideAuthor = PublishSubject<String>()
+    let pdfURL = PublishSubject<String>()
 
     var loading: Observable<Bool> {
         return isLoading.asObservable()
@@ -36,11 +37,12 @@ class ImportViewModel {
     }
     var importSlide: Observable<Void> {
         return Observable
-            .zip(slideTitle, slideAuthor, slideId, importTrigger) { slideTitle, slideAuthor, slideId, importTrigger -> Void in
+            .zip(slideTitle, slideAuthor, slideId, pdfURL, importTrigger) { slideTitle, slideAuthor, slideId, pdfURL, importTrigger -> Void in
                 let slide = Slide()
                 slide.title = slideTitle
                 slide.author = slideAuthor
                 slide.id = slideId
+                slide.pdfURL = pdfURL
                 let realm = try! Realm()
                 try? realm.write {
                     realm.add(slide, update: true)
@@ -70,6 +72,9 @@ class ImportViewModel {
                     guard let author = details.css("a").first?.innerHTML else {
                         return
                     }
+                    guard let pdfURL = doc?.body?.css("#share_pdf").first?["href"] else {
+                        return
+                    }
                     guard let slidesContainer = doc?.body?.css("div#slides_container").first?.innerHTML else {
                         return
                     }
@@ -82,6 +87,7 @@ class ImportViewModel {
                     self.slideId.onNext(id)
                     self.slideAuthor.onNext(author)
                     self.slideTitle.onNext(title)
+                    self.pdfURL.onNext(pdfURL)
                 } catch {
                 }
             })

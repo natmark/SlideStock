@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E70F9FEB1EB76B0000E40FA3 /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */; };
 		E763C8021EC4A28300599513 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763C8011EC4A28300599513 /* SlideCell.swift */; };
+		E763C8041EC537F200599513 /* WebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763C8031EC537F200599513 /* WebKit.swift */; };
+		E763C8061EC5408A00599513 /* KYNavigationProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E763C8051EC5408A00599513 /* KYNavigationProgress.framework */; };
 		E782AA3E1EBC8531006FBBEB /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3B1EBC8531006FBBEB /* Kanna.framework */; };
 		E782AA3F1EBC8531006FBBEB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3C1EBC8531006FBBEB /* Realm.framework */; };
 		E782AA401EBC8531006FBBEB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
 		E763C8011EC4A28300599513 /* SlideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
+		E763C8031EC537F200599513 /* WebKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebKit.swift; sourceTree = "<group>"; };
+		E763C8051EC5408A00599513 /* KYNavigationProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KYNavigationProgress.framework; path = Carthage/Build/iOS/KYNavigationProgress.framework; sourceTree = "<group>"; };
 		E782AA3B1EBC8531006FBBEB /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		E782AA3C1EBC8531006FBBEB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E763C8061EC5408A00599513 /* KYNavigationProgress.framework in Frameworks */,
 				E782AA431EBC872E006FBBEB /* libxml2.tbd in Frameworks */,
 				E782AA3E1EBC8531006FBBEB /* Kanna.framework in Frameworks */,
 				E782AA3F1EBC8531006FBBEB /* Realm.framework in Frameworks */,
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				E78337151EC2A1860004802F /* String.swift */,
+				E763C8031EC537F200599513 /* WebKit.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 		E7852E301EB5CEA5009DE5A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E763C8051EC5408A00599513 /* KYNavigationProgress.framework */,
 				E782AA411EBC8707006FBBEB /* libxml2.tbd */,
 				E782AA3B1EBC8531006FBBEB /* Kanna.framework */,
 				E782AA3C1EBC8531006FBBEB /* Realm.framework */,
@@ -333,6 +340,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KYNavigationProgress.framework",
 			);
 			name = "[Carthage] Run Script";
 			outputPaths = (
@@ -362,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E763C8041EC537F200599513 /* WebKit.swift in Sources */,
 				E7A700EA1EB9C15A0094FE49 /* SlideViewController.swift in Sources */,
 				E7A700EC1EB9C2970094FE49 /* StockViewModel.swift in Sources */,
 				E7A700E81EB9BC0F0094FE49 /* ImportViewController.swift in Sources */,
