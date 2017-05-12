@@ -1,4 +1,6 @@
-github "ishkawa/APIKit" ~> 3.0
 github "ikesyo/Himotoki" ~> 3.0
 github "ReactiveX/RxSwift" ~> 3.0
 github "pinterest/PINRemoteImage" ~> 3.0
+github "realm/realm-cocoa" ~> 2.7
+github "tid-kijyun/Kanna" ~> 2.1.0
+github "ykyouhei/KYNavigationProgress" ~> 2.0

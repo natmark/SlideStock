@@ -7,27 +7,101 @@
 //
 
 import UIKit
+import RxSwift
+import PINRemoteImage
 
 class ImportViewController: UIViewController {
+
+    @IBOutlet weak var URLTextField: UITextField!
+    @IBOutlet weak var slideImageView: UIImageView!
+    @IBOutlet weak var byLabel: UILabel!
+    @IBOutlet weak var slideTitleLabel: UILabel!
+    @IBOutlet weak var slideAuthorLabel: UILabel!
+    @IBOutlet weak var importButton: UIButton!
+
+    fileprivate let viewModel = ImportViewModel()
+    fileprivate let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        URLTextField.attributedPlaceholder = NSAttributedString(string: "Input slide url here", attributes: [NSForegroundColorAttributeName:UIColor.white])
+        bindViewState()
+        bindUI()
+
+    }
+    fileprivate func bindViewState() {
+        viewModel.componentsHidden
+            .bind(onNext: {
+                self.slideImageView.isHidden = $0
+                self.slideTitleLabel.isHidden = $0
+                self.byLabel.isHidden = $0
+                self.slideAuthorLabel.isHidden = $0
+                self.importButton.isHidden = $0
+            })
+            .addDisposableTo(disposeBag)
+
+        viewModel.loading
+            .bind { loading in
+            }
+            .addDisposableTo(disposeBag)
+
+        viewModel.requestCompleted
+            .bind { post in
+            }
+            .addDisposableTo(disposeBag)
+
+        viewModel.error
+            .bind { error in
+            }
+            .addDisposableTo(disposeBag)
+    }
+    fileprivate func bindUI() {
+        URLTextField.rx.controlEvent([.editingDidEnd])
+            .flatMap({
+                self.URLTextField.text.flatMap(Observable.just) ?? Observable.empty()
+            })
+            .bind(to: viewModel.urlString)
+            .addDisposableTo(disposeBag)
+
+        viewModel.slideId
+            .bind(onNext: {
+                self.slideImageView.pin_setImage(from: URL(string: "https://speakerd.s3.amazonaws.com/presentations/\($0)/slide_0.jpg"))
+            })
+            .addDisposableTo(disposeBag)
+
+        viewModel.slideTitle
+            .bind(onNext: {
+                self.slideTitleLabel.text = $0
+            })
+            .addDisposableTo(disposeBag)
+
+        viewModel.slideAuthor
+            .bind(onNext: {
+                self.slideAuthorLabel.text = $0
+            })
+            .addDisposableTo(disposeBag)
+
+        importButton.rx.tap
+            .bind(to: viewModel.importTrigger)
+            .addDisposableTo(disposeBag)
+
+        viewModel.importSlide
+            .bind(onNext: {
+                self.navigationController?.popViewController(animated: true)
+            })
+            .addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+extension ImportViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
-    */
-
 }

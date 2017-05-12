@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		E70F9FEB1EB76B0000E40FA3 /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */; };
-		E7852E381EB5CEA6009DE5A0 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E311EB5CEA5009DE5A0 /* APIKit.framework */; };
+		E763C8021EC4A28300599513 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763C8011EC4A28300599513 /* SlideCell.swift */; };
+		E763C8041EC537F200599513 /* WebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763C8031EC537F200599513 /* WebKit.swift */; };
+		E763C8061EC5408A00599513 /* KYNavigationProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E763C8051EC5408A00599513 /* KYNavigationProgress.framework */; };
+		E782AA3E1EBC8531006FBBEB /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3B1EBC8531006FBBEB /* Kanna.framework */; };
+		E782AA3F1EBC8531006FBBEB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3C1EBC8531006FBBEB /* Realm.framework */; };
+		E782AA401EBC8531006FBBEB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */; };
+		E782AA431EBC872E006FBBEB /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA411EBC8707006FBBEB /* libxml2.tbd */; };
+		E78337161EC2A1860004802F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78337151EC2A1860004802F /* String.swift */; };
 		E7852E391EB5CEA6009DE5A0 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */; };
 		E7852E3A1EB5CEA6009DE5A0 /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E331EB5CEA5009DE5A0 /* PINCache.framework */; };
 		E7852E3B1EB5CEA6009DE5A0 /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E341EB5CEA6009DE5A0 /* PINRemoteImage.framework */; };
-		E7852E3C1EB5CEA6009DE5A0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E351EB5CEA6009DE5A0 /* Result.framework */; };
 		E7852E3D1EB5CEA6009DE5A0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E361EB5CEA6009DE5A0 /* RxCocoa.framework */; };
 		E7852E3E1EB5CEA6009DE5A0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7852E371EB5CEA6009DE5A0 /* RxSwift.framework */; };
 		E7A700E81EB9BC0F0094FE49 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700E71EB9BC0F0094FE49 /* ImportViewController.swift */; };
@@ -20,7 +26,7 @@
 		E7A700EC1EB9C2970094FE49 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700EB1EB9C2970094FE49 /* StockViewModel.swift */; };
 		E7A700EE1EB9C2C10094FE49 /* ImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700ED1EB9C2C10094FE49 /* ImportViewModel.swift */; };
 		E7A700F21EB9C3150094FE49 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700F11EB9C3150094FE49 /* Slide.swift */; };
-		E7A700F71EB9C4440094FE49 /* SessionRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700F61EB9C4440094FE49 /* SessionRx.swift */; };
+		E7A700FA1EBA18B30094FE49 /* SlideRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A700F91EBA18B30094FE49 /* SlideRequest.swift */; };
 		E7C2B4E91EB5B39100619090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2B4E81EB5B39100619090 /* AppDelegate.swift */; };
 		E7C2B4EB1EB5B39100619090 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2B4EA1EB5B39100619090 /* StockViewController.swift */; };
 		E7C2B4EE1EB5B39100619090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C2B4EC1EB5B39100619090 /* Main.storyboard */; };
@@ -41,6 +47,14 @@
 
 /* Begin PBXFileReference section */
 		E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
+		E763C8011EC4A28300599513 /* SlideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
+		E763C8031EC537F200599513 /* WebKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebKit.swift; sourceTree = "<group>"; };
+		E763C8051EC5408A00599513 /* KYNavigationProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KYNavigationProgress.framework; path = Carthage/Build/iOS/KYNavigationProgress.framework; sourceTree = "<group>"; };
+		E782AA3B1EBC8531006FBBEB /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
+		E782AA3C1EBC8531006FBBEB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		E782AA411EBC8707006FBBEB /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		E78337151EC2A1860004802F /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E7852E311EB5CEA5009DE5A0 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		E7852E331EB5CEA5009DE5A0 /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
@@ -53,7 +67,7 @@
 		E7A700EB1EB9C2970094FE49 /* StockViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 		E7A700ED1EB9C2C10094FE49 /* ImportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewModel.swift; sourceTree = "<group>"; };
 		E7A700F11EB9C3150094FE49 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
-		E7A700F61EB9C4440094FE49 /* SessionRx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRx.swift; sourceTree = "<group>"; };
+		E7A700F91EBA18B30094FE49 /* SlideRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRequest.swift; sourceTree = "<group>"; };
 		E7C2B4E51EB5B39100619090 /* SlideStock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideStock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C2B4E81EB5B39100619090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C2B4EA1EB5B39100619090 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
@@ -71,12 +85,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E763C8061EC5408A00599513 /* KYNavigationProgress.framework in Frameworks */,
+				E782AA431EBC872E006FBBEB /* libxml2.tbd in Frameworks */,
+				E782AA3E1EBC8531006FBBEB /* Kanna.framework in Frameworks */,
+				E782AA3F1EBC8531006FBBEB /* Realm.framework in Frameworks */,
+				E782AA401EBC8531006FBBEB /* RealmSwift.framework in Frameworks */,
 				E70F9FEB1EB76B0000E40FA3 /* PINOperation.framework in Frameworks */,
-				E7852E381EB5CEA6009DE5A0 /* APIKit.framework in Frameworks */,
 				E7852E391EB5CEA6009DE5A0 /* Himotoki.framework in Frameworks */,
 				E7852E3A1EB5CEA6009DE5A0 /* PINCache.framework in Frameworks */,
 				E7852E3B1EB5CEA6009DE5A0 /* PINRemoteImage.framework in Frameworks */,
-				E7852E3C1EB5CEA6009DE5A0 /* Result.framework in Frameworks */,
 				E7852E3D1EB5CEA6009DE5A0 /* RxCocoa.framework in Frameworks */,
 				E7852E3E1EB5CEA6009DE5A0 /* RxSwift.framework in Frameworks */,
 			);
@@ -92,9 +109,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E78337141EC2A17B0004802F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E78337151EC2A1860004802F /* String.swift */,
+				E763C8031EC537F200599513 /* WebKit.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		E7852E301EB5CEA5009DE5A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E763C8051EC5408A00599513 /* KYNavigationProgress.framework */,
+				E782AA411EBC8707006FBBEB /* libxml2.tbd */,
+				E782AA3B1EBC8531006FBBEB /* Kanna.framework */,
+				E782AA3C1EBC8531006FBBEB /* Realm.framework */,
+				E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */,
 				E70F9FEA1EB76B0000E40FA3 /* PINOperation.framework */,
 				E7852E311EB5CEA5009DE5A0 /* APIKit.framework */,
 				E7852E321EB5CEA5009DE5A0 /* Himotoki.framework */,
@@ -113,8 +144,8 @@
 				E7A700E71EB9BC0F0094FE49 /* ImportViewController.swift */,
 				E7A700E91EB9C15A0094FE49 /* SlideViewController.swift */,
 				E7C2B4EA1EB5B39100619090 /* StockViewController.swift */,
+				E763C8011EC4A28300599513 /* SlideCell.swift */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -124,7 +155,6 @@
 				E7A700ED1EB9C2C10094FE49 /* ImportViewModel.swift */,
 				E7A700EB1EB9C2970094FE49 /* StockViewModel.swift */,
 			);
-			name = ViewModels;
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
@@ -133,26 +163,15 @@
 			children = (
 				E7A700F11EB9C3150094FE49 /* Slide.swift */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E7A700F41EB9C42C0094FE49 /* Extensions */ = {
+		E7A700F81EBA18400094FE49 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E7A700F51EB9C4320094FE49 /* ExtensionsRx */,
+				E7A700F91EBA18B30094FE49 /* SlideRequest.swift */,
 			);
-			name = Extensions;
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E7A700F51EB9C4320094FE49 /* ExtensionsRx */ = {
-			isa = PBXGroup;
-			children = (
-				E7A700F61EB9C4440094FE49 /* SessionRx.swift */,
-			);
-			name = ExtensionsRx;
-			path = ExtensionsRx;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		E7C2B4DC1EB5B39100619090 = {
@@ -177,8 +196,9 @@
 		E7C2B4E71EB5B39100619090 /* SlideStock */ = {
 			isa = PBXGroup;
 			children = (
-				E7A700F41EB9C42C0094FE49 /* Extensions */,
+				E78337141EC2A17B0004802F /* Extensions */,
 				E7A700F31EB9C3580094FE49 /* Models */,
+				E7A700F81EBA18400094FE49 /* Networking */,
 				E7A700F01EB9C2E90094FE49 /* ViewModels */,
 				E7A700EF1EB9C2DB0094FE49 /* Views */,
 				E7C2B4E81EB5B39100619090 /* AppDelegate.swift */,
@@ -308,14 +328,16 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINRemoteImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINCache.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PINOperation.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KYNavigationProgress.framework",
 			);
 			name = "[Carthage] Run Script";
 			outputPaths = (
@@ -345,12 +367,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A700F71EB9C4440094FE49 /* SessionRx.swift in Sources */,
+				E763C8041EC537F200599513 /* WebKit.swift in Sources */,
 				E7A700EA1EB9C15A0094FE49 /* SlideViewController.swift in Sources */,
 				E7A700EC1EB9C2970094FE49 /* StockViewModel.swift in Sources */,
 				E7A700E81EB9BC0F0094FE49 /* ImportViewController.swift in Sources */,
+				E78337161EC2A1860004802F /* String.swift in Sources */,
 				E7C2B4EB1EB5B39100619090 /* StockViewController.swift in Sources */,
+				E7A700FA1EBA18B30094FE49 /* SlideRequest.swift in Sources */,
 				E7A700F21EB9C3150094FE49 /* Slide.swift in Sources */,
+				E763C8021EC4A28300599513 /* SlideCell.swift in Sources */,
 				E7C2B4E91EB5B39100619090 /* AppDelegate.swift in Sources */,
 				E7A700EE1EB9C2C10094FE49 /* ImportViewModel.swift in Sources */,
 			);
@@ -498,6 +523,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SlideStock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.SlideStock;
@@ -515,6 +541,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SlideStock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.SlideStock;
