@@ -61,7 +61,7 @@ class ImportViewModel {
             .subscribe(onNext: { path in
                 do {
                     print(path)
-                    let data = try FetchSlideRequest.getHTML(path: path)
+                    let data = try FetchSlideRequest.getHTML(path: path.replacingOccurrences(of: "https://speakerdeck.com/", with: ""))
                     let doc = HTML(html: data, encoding: String.Encoding.utf8)
                     guard let details = doc?.body?.css("div#talk-details").first else { return }
                     guard let title = details.css("h1").first?.innerHTML else { return }
