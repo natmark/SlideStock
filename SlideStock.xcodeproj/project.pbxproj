@@ -11,6 +11,10 @@
 		E763C8021EC4A28300599513 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763C8011EC4A28300599513 /* SlideCell.swift */; };
 		E763C8041EC537F200599513 /* WebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763C8031EC537F200599513 /* WebKit.swift */; };
 		E763C8061EC5408A00599513 /* KYNavigationProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E763C8051EC5408A00599513 /* KYNavigationProgress.framework */; };
+		E7722F781ED50A130070215E /* SlideStockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7722F771ED50A130070215E /* SlideStockUITests.swift */; };
+		E7722F801ED50A510070215E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7722F7F1ED50A510070215E /* SnapshotHelper.swift */; };
+		E7722F821ED5124E0070215E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3C1EBC8531006FBBEB /* Realm.framework */; };
+		E7722F831ED512550070215E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */; };
 		E782AA3E1EBC8531006FBBEB /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3B1EBC8531006FBBEB /* Kanna.framework */; };
 		E782AA3F1EBC8531006FBBEB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3C1EBC8531006FBBEB /* Realm.framework */; };
 		E782AA401EBC8531006FBBEB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */; };
@@ -36,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E7722F7A1ED50A130070215E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7C2B4DD1EB5B39100619090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7C2B4E41EB5B39100619090;
+			remoteInfo = SlideStock;
+		};
 		E7C2B4FA1EB5B39100619090 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E7C2B4DD1EB5B39100619090 /* Project object */;
@@ -50,6 +61,10 @@
 		E763C8011EC4A28300599513 /* SlideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
 		E763C8031EC537F200599513 /* WebKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebKit.swift; sourceTree = "<group>"; };
 		E763C8051EC5408A00599513 /* KYNavigationProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KYNavigationProgress.framework; path = Carthage/Build/iOS/KYNavigationProgress.framework; sourceTree = "<group>"; };
+		E7722F751ED50A130070215E /* SlideStockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideStockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7722F771ED50A130070215E /* SlideStockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideStockUITests.swift; sourceTree = "<group>"; };
+		E7722F791ED50A130070215E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7722F7F1ED50A510070215E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		E782AA3B1EBC8531006FBBEB /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		E782AA3C1EBC8531006FBBEB /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E782AA3D1EBC8531006FBBEB /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -81,6 +96,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E7722F721ED50A130070215E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7C2B4E21EB5B39100619090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,12 +125,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7722F831ED512550070215E /* RealmSwift.framework in Frameworks */,
+				E7722F821ED5124E0070215E /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7722F761ED50A130070215E /* SlideStockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7722F791ED50A130070215E /* Info.plist */,
+				E7722F771ED50A130070215E /* SlideStockUITests.swift */,
+				E7722F7F1ED50A510070215E /* SnapshotHelper.swift */,
+			);
+			path = SlideStockUITests;
+			sourceTree = "<group>";
+		};
 		E78337141EC2A17B0004802F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +150,7 @@
 				E763C8031EC537F200599513 /* WebKit.swift */,
 			);
 			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E7852E301EB5CEA5009DE5A0 /* Frameworks */ = {
@@ -142,9 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				E7A700E71EB9BC0F0094FE49 /* ImportViewController.swift */,
+				E763C8011EC4A28300599513 /* SlideCell.swift */,
 				E7A700E91EB9C15A0094FE49 /* SlideViewController.swift */,
 				E7C2B4EA1EB5B39100619090 /* StockViewController.swift */,
-				E763C8011EC4A28300599513 /* SlideCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +216,7 @@
 				E7C2B4E61EB5B39100619090 /* Products */,
 				E7C2B4E71EB5B39100619090 /* SlideStock */,
 				E7C2B4FC1EB5B39100619090 /* SlideStockTests */,
+				E7722F761ED50A130070215E /* SlideStockUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +225,7 @@
 			children = (
 				E7C2B4E51EB5B39100619090 /* SlideStock.app */,
 				E7C2B4F91EB5B39100619090 /* SlideStockTests.xctest */,
+				E7722F751ED50A130070215E /* SlideStockUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +259,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E7722F741ED50A130070215E /* SlideStockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7722F7E1ED50A130070215E /* Build configuration list for PBXNativeTarget "SlideStockUITests" */;
+			buildPhases = (
+				E7722F711ED50A130070215E /* Sources */,
+				E7722F721ED50A130070215E /* Frameworks */,
+				E7722F731ED50A130070215E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7722F7B1ED50A130070215E /* PBXTargetDependency */,
+			);
+			name = SlideStockUITests;
+			productName = SlideStockUITests;
+			productReference = E7722F751ED50A130070215E /* SlideStockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E7C2B4E41EB5B39100619090 /* SlideStock */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7C2B5021EB5B39100619090 /* Build configuration list for PBXNativeTarget "SlideStock" */;
@@ -269,6 +324,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Atsuya Sato";
 				TargetAttributes = {
+					E7722F741ED50A130070215E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = DEQGLB9PU4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E7C2B4E41EB5B39100619090;
+					};
 					E7C2B4E41EB5B39100619090 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DEQGLB9PU4;
@@ -297,11 +358,19 @@
 			targets = (
 				E7C2B4E41EB5B39100619090 /* SlideStock */,
 				E7C2B4F81EB5B39100619090 /* SlideStockTests */,
+				E7722F741ED50A130070215E /* SlideStockUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E7722F731ED50A130070215E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7C2B4E31EB5B39100619090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +432,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E7722F711ED50A130070215E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7722F781ED50A130070215E /* SlideStockUITests.swift in Sources */,
+				E7722F801ED50A510070215E /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7C2B4E11EB5B39100619090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +470,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E7722F7B1ED50A130070215E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7C2B4E41EB5B39100619090 /* SlideStock */;
+			targetProxy = E7722F7A1ED50A130070215E /* PBXContainerItemProxy */;
+		};
 		E7C2B4FB1EB5B39100619090 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E7C2B4E41EB5B39100619090 /* SlideStock */;
@@ -421,6 +504,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E7722F7C1ED50A130070215E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SlideStockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.SlideStockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SlideStock;
+			};
+			name = Debug;
+		};
+		E7722F7D1ED50A130070215E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SlideStockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.SlideStockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SlideStock;
+			};
+			name = Release;
+		};
 		E7C2B5001EB5B39100619090 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -556,6 +673,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SlideStockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.SlideStockTests;
@@ -571,6 +692,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SlideStockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.SlideStockTests;
@@ -583,6 +708,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E7722F7E1ED50A130070215E /* Build configuration list for PBXNativeTarget "SlideStockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7722F7C1ED50A130070215E /* Debug */,
+				E7722F7D1ED50A130070215E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7C2B4E01EB5B39100619090 /* Build configuration list for PBXProject "SlideStock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
