@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import PINRemoteImage
+import MBProgressHUD
 
 class ImportViewController: UIViewController {
 
@@ -21,9 +22,12 @@ class ImportViewController: UIViewController {
 
     fileprivate let viewModel = ImportViewModel()
     fileprivate let disposeBag = DisposeBag()
+    fileprivate var progressHUD: MBProgressHUD? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressHUD = MBProgressHUD(view: self.view)
+        self.view.addSubview(progressHUD!)
 
         // Do any additional setup after loading the view.
         URLTextField.attributedPlaceholder = NSAttributedString(string: "Input slide url here", attributes: [NSForegroundColorAttributeName:UIColor.white])
@@ -33,12 +37,14 @@ class ImportViewController: UIViewController {
     }
     fileprivate func bindViewState() {
         viewModel.componentsHidden
+            .observeOn(MainScheduler.instance)
             .bind(onNext: {
                 self.slideImageView.isHidden = $0
                 self.slideTitleLabel.isHidden = $0
                 self.byLabel.isHidden = $0
                 self.slideAuthorLabel.isHidden = $0
                 self.importButton.isHidden = $0
+                self.progressHUD?.hide(animated: true)
             })
             .addDisposableTo(disposeBag)
 
@@ -102,6 +108,7 @@ class ImportViewController: UIViewController {
 extension ImportViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        self.progressHUD?.show(animated: true)
         return true
     }
 }
