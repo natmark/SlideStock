@@ -57,7 +57,9 @@ class ImportViewModel {
     let requestCompleted = PublishSubject<Slide>()
 
     fileprivate func bindSearchRequest() {
+        let backgroundScheduler = SerialDispatchQueueScheduler(qos: .default)
         urlString
+            .observeOn(backgroundScheduler)
             .subscribe(onNext: { path in
                 do {
                     print(path)
