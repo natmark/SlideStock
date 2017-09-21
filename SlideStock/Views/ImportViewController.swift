@@ -78,12 +78,14 @@ class ImportViewController: UIViewController {
             .addDisposableTo(disposeBag)
 
         viewModel.slideTitle
+            .observeOn(MainScheduler.instance)
             .bind(onNext: {
                 self.slideTitleLabel.text = $0
             })
             .addDisposableTo(disposeBag)
 
         viewModel.slideAuthor
+            .observeOn(MainScheduler.instance)
             .bind(onNext: {
                 self.slideAuthorLabel.text = $0
             })
