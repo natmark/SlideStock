@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ui9-ef-Aeg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ui9-ef-Aeg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -122,7 +122,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ui9-ef-Aeg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="94v-Ue-0JK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.07540767639875412" green="0.50124877691268921" blue="0.34099894762039185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,7 +133,6 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="y9R-aC-yHc">
-                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -155,9 +154,23 @@
                     <view key="view" contentMode="scaleToFill" id="9nY-6o-0bD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzY-Fq-MXM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.199973762" green="0.2000150383" blue="0.19997116919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EzY-Fq-MXM" secondAttribute="trailing" id="ZXX-EU-jGN"/>
+                            <constraint firstItem="joB-Z3-slg" firstAttribute="top" secondItem="EzY-Fq-MXM" secondAttribute="bottom" id="fY6-YO-Bh8"/>
+                            <constraint firstItem="EzY-Fq-MXM" firstAttribute="top" secondItem="LjV-RZ-d8t" secondAttribute="bottom" id="xsd-mN-7U3"/>
+                            <constraint firstItem="EzY-Fq-MXM" firstAttribute="leading" secondItem="9nY-6o-0bD" secondAttribute="leading" id="y0y-Jx-iz7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Slide Title" id="jdq-G3-6WZ"/>
+                    <connections>
+                        <outlet property="containerView" destination="EzY-Fq-MXM" id="4w9-Ls-0WR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQA-hS-gY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

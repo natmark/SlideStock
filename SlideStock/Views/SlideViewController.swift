@@ -12,6 +12,8 @@ import RxSwift
 import KYNavigationProgress
 
 class SlideViewController: UIViewController {
+    @IBOutlet weak var containerView: UIView!
+
     var slide = Slide()
     fileprivate let WKView = WKWebView()
     fileprivate let disposeBag = DisposeBag()
@@ -21,13 +23,17 @@ class SlideViewController: UIViewController {
         self.navigationController?.progressTintColor = UIColor.red
         self.navigationItem.title = slide.title
 
-        self.view = self.WKView
         self.WKView.navigationDelegate = self
         guard let url = URL(string: slide.pdfURL) else {
             return
         }
         self.WKView.load(URLRequest(url: url))
+
+        self.containerView.addSubview(self.WKView)
         bindUI()
+    }
+    override func viewDidLayoutSubviews() {
+        self.WKView.frame = self.containerView.bounds
     }
     func bindUI() {
         self.WKView.rx.estimatedProgress.bind(onNext: {
