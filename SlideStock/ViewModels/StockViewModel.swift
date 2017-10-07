@@ -47,6 +47,14 @@ class StockViewModel: NSObject {
             return slides.value[index]
         }
     }
+    func getRealmFile() -> Data? {
+        let config = Realm.Configuration.defaultConfiguration
+        guard let fileURL = config.fileURL else {
+            return nil
+        }
+        let realmData = try? Data(contentsOf: fileURL)
+        return realmData
+    }
 }
 extension StockViewModel : UITableViewDataSource {
     // MARK: - TableView

@@ -49,6 +49,30 @@ class StockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showMenu(_ sender: UIBarButtonItem) {
+        let realmFile = viewModel.getRealmFile()
+
+        var activityItems = [Any]()
+
+        if let realmFile = realmFile {
+            activityItems.append(realmFile)
+        }
+
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+
+        let excludedActivityTypes = [
+            UIActivityType.postToFacebook,
+            UIActivityType.postToTwitter,
+            UIActivityType.message,
+            UIActivityType.saveToCameraRoll,
+            UIActivityType.print,
+        ]
+
+        activityVC.excludedActivityTypes = excludedActivityTypes
+
+        self.present(activityVC, animated: true, completion: nil)
+    }
+
 }
 extension StockViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
